@@ -1,0 +1,557 @@
+%[greet]('training': '50')
+    ~[hi] ~[greetings?]
+    ~[greetings] ~[hi?]
+
+%[bye]('training': '50')
+    ~[leaving?] ~[bye]
+    ~[leaving] ~[bye?]
+
+%[about]('training':'4')
+    about you
+    who are you
+    tell me about yourself
+    what's your purpose
+
+%[imdbreq]('training':'400')
+    ~[wh?] @[movie] on imdb
+    open imdb for @[movie]
+
+%[genq]('training':'1000')
+    ~[wh?] @[param] ~[of] @[movie]
+    @[movie] @[param]
+
+%[gencalc]('training':'1000')
+    @[this?] ~[wh] @[opcalc] of @[pnum]
+
+%[filternum]('training':'1000')
+    @[this?] ~[wh] @[num?] @[up] @[pnum] ~[mov]
+    @[this?] @[num?] ~[mov] with @[up] @[pnum]
+
+%[filtertext]('training':'1000')
+    @[this?] ~[wh] ~[mov] belonging to @[val] @[ptext]
+    @[this?] ~[wh] ~[mov] whose @[ptext] is @[val]
+
+%[filtercomp]('training':'1000')
+    @[this?] ~[wh?] ~[mov] whose @[pnum] is @[opcomp] @[numall]
+
+%[export]('training':'40')
+    ~[courtesy?] export this ~[data] as @[format]
+    ~[wh?] @[format] of this ~[data]
+
+@[movie]
+    Toy Story
+    Jumanji
+    Grumpier Old Men
+    Waiting to Exhale
+    Father of the Bride Part II
+    Heat
+    Sabrina
+    Tom and Huck
+    Sudden Death
+    GoldenEye
+    The American President
+    Dracula: Dead and Loving It
+    Balto
+    Nixon
+    Cutthroat Island
+    Casino
+    Sense and Sensibility
+    Four Rooms
+    Ace Ventura: When Nature Calls
+    Money Train
+    Get Shorty
+    Copycat
+    Assassins
+    Powder
+    Leaving Las Vegas
+    Othello
+    Now and Then
+    Persuasion
+    The City of Lost Children
+    Shanghai Triad
+    Dangerous Minds
+    Twelve Monkeys
+    Wings of Courage
+    Babe
+    Carrington
+    Dead Man Walking
+    Across the Sea of Time
+    It Takes Two
+    Clueless
+    Cry, the Beloved Country
+    Richard III
+    Dead Presidents
+    Restoration
+    Mortal Kombat
+    To Die For
+    How To Make An American Quilt
+    Se7en
+    Pocahontas
+    When Night Is Falling
+    The Usual Suspects
+    Guardian Angel
+    Mighty Aphrodite
+    Lamerica
+    The Big Green
+    Georgia
+    Kids of the Round Table
+    Home for the Holidays
+    The Postman
+    The Confessional
+    The Indian in the Cupboard
+    Eye for an Eye
+    Mr. Holland's Opus
+    Don't Be a Menace to South Central While Drinking Your Juice in the Hood
+    Two If by Sea
+    Bio-Dome
+    Lawnmower Man 2: Beyond Cyberspace
+    Two Bits
+    French Twist
+    Friday
+    From Dusk Till Dawn
+    Fair Game
+    Kicking and Screaming
+    Les Miserables
+    Bed of Roses
+    Big Bully
+    Screamers
+    Nico Icon
+    The Crossing Guard
+    The Juror
+    The White Balloon
+    Things to Do in Denver When You're Dead
+    Antonia's Line
+    Once Upon a Time... When We Were Colored
+    Last Summer in the Hamptons
+    Angels and Insects
+    White Squall
+    Dunston Checks In
+    Black Sheep
+    Nick of Time
+    The Journey of August King
+    Mary Reilly
+    Vampire in Brooklyn
+    Beautiful Girls
+    Broken Arrow
+    A Midwinter's Tale
+    La Haine
+    Shopping
+    Heidi Fleiss: Hollywood Madam
+    City Hall
+    Bottle Rocket
+    Mr. Wrong
+    Unforgettable
+    Happy Gilmore
+    The Bridges of Madison County
+    Nobody Loves Me
+    Muppet Treasure Island
+    Catwalk
+    Headless Body in Topless Bar
+    Braveheart
+    Taxi Driver
+    Rumble in the Bronx
+    Before and After
+    Margaret's Museum
+    Happiness Is in the Field
+    Anne Frank Remembered
+    The Young Poisoner's Handbook
+    If Lucy Fell
+    Steal Big Steal Little
+    Race the Sun
+    The Boys of St. Vincent
+    Boomerang
+    Chungking Express
+    The Star Maker
+    Flirting with Disaster
+    The Neverending Story III: Escape from Fantasia
+    The Silences of the Palace
+    Jupiter's Wife
+    Pie in the Sky
+    Angela
+    Frankie Starlight
+    Jade
+    Nueba Yol
+    Sonic Outlaws
+    Down Periscope
+    From the Journals of Jean Seberg
+    Man of the Year
+    The Neon Bible
+    Target
+    Up Close & Personal
+    The Birdcage
+    Virgin Mary
+    The Brothers McMullen
+    Bad Boys
+    The Amazing Panda Adventure
+    The Basketball Diaries
+    An Awfully Big Adventure
+    Amateur
+    Apollo 13
+    Rob Roy
+    The Addiction
+    Batman Forever
+    Belle de Jour
+    Beyond Rangoon
+    Blue in the Face
+    Canadian Bacon
+    Casper
+    Clockers
+    Congo
+    Crimson Tide
+    Crumb
+    Desperado
+    Devil in a Blue Dress
+    Die Hard: With a Vengeance
+    The Doom Generation
+    Feast of July
+    First Knight
+    Free Willy 2 - The Adventure Home
+    Hackers
+    Jeffrey
+    Johnny Mnemonic
+    Judge Dredd
+    Jury Duty
+    Kids
+    Living in Oblivion
+    Lord of Illusions
+    Love & Human Remains
+    Mad Love
+    Mallrats
+    Mighty Morphin Power Rangers: The Movie
+    Moonlight and Valentino
+    Mute Witness
+    Nadja
+    The Net
+    Nine Months
+    Party Girl
+    The Prophecy
+    Reckless
+    Safe
+    The Scarlet Letter
+    The Show
+    Showgirls
+    Smoke
+    Something to Talk About
+    Species
+    The Stars Fell on Henrietta
+    Strange Days
+    The Umbrellas of Cherbourg
+    The Tie That Binds
+    Three Wishes
+    Total Eclipse
+    To Wong Foo, Thanks for Everything! Julie Newmar
+    Under Siege 2: Dark Territory
+    Unstrung Heroes
+    Unzipped
+    A Walk in the Clouds
+    Waterworld
+    White Man's Burden
+    Wild Bill
+    The Browning Version
+    Bushwhacked
+    Burnt by the Sun
+    Before the Rain
+    Before Sunrise
+    Billy Madison
+    The Babysitter
+    Boys on the Side
+    The Cure
+    Castle Freak
+    Circle of Friends
+    Clerks
+    Don Juan DeMarco
+    Disclosure
+    Dream Man
+    Drop Zone
+    Destiny Turns on the Radio
+    Death and the Maiden
+    Dolores Claiborne
+    Dumb and Dumber
+    Eat Drink Man Woman
+    Exotica
+    Exit to Eden
+    Ed Wood
+    French Kiss
+    Forget Paris
+    Far from Home: The Adventures of Yellow Dog
+    A Goofy Movie
+    Hideaway
+    Fluke
+    Farinelli
+    Gordy
+    Gumby: The Movie
+    The Glass Shield
+    Hoop Dreams
+    Heavenly Creatures
+    Houseguest
+    Immortal Beloved
+    Heavyweights
+    The Hunted
+    I.Q.
+    Interview with the Vampire
+    Jefferson in Paris
+    The Jerky Boys
+    Junior
+    Just Cause
+    A Kid in King Arthur's Court
+    Kiss of Death
+    Star Wars
+    Little Women
+    A Little Princess
+    Ladybird Ladybird
+    L'Enfer
+    Like Water for Chocolate
+    Legends of the Fall
+    Major Payne
+    Little Odessa
+    Mi Vida Loca
+    Love Affair
+    Losing Isaiah
+    The Madness of King George
+    Mary Shelley's Frankenstein
+    Man of the House
+    Mixed Nuts
+    Milk Money
+    Miracle on 34th Street
+    Miami Rhapsody
+    My Family
+    Murder in the First
+    Nobody's Fool
+    Nell
+    New Jersey Drive
+    New York Cop
+    Beyond Bedlam
+    Nemesis 2 - Nebula
+    Nina Takes a Lover
+    Natural Born Killers
+    Only You
+    Once Were Warriors
+    Poison Ivy II: Lily
+    Outbreak
+    Leon: The Professional
+    The Perez Family
+    A Pyromaniac's Love Story
+    Pulp Fiction
+    Panther
+    Pushing Hands
+    Priest
+    Quiz Show
+    Picture Bride
+    Queen Margot
+
+@[param]
+    adult
+    belongs to collection
+    budget
+    genres
+    homepage
+    id
+    imdb id
+    original language
+    original title
+    overview
+    popularity
+    poster path
+    production companies
+    production countries
+    release date
+    revenue
+    runtime
+    spoken languages
+    status
+    tagline
+    title
+    video
+    vote average
+    vote count
+
+@[num]
+    5
+    10
+    20
+    50
+    100
+
+@[up]
+    top
+    most
+    maximum
+    highest
+    latest
+
+@[pnum]
+    budget
+    popularity
+    release date
+    revenue
+    runtime
+    vote average
+    vote count
+
+@[opcomp]
+    greater than
+    less than
+    equal to
+
+@[opcalc]
+    mean
+    average
+    median
+    mode
+    sum
+
+@[numall]
+    1.25
+    10
+    4.5
+    9.87
+    6.46
+    8.4568
+    9.1254
+    124
+    6452
+    687
+    1265
+    19
+
+@[this]
+    from these
+    from this
+    out of these
+    out of this
+    of these
+
+@[val]
+    ~[action]
+    ~[english]
+    ~[warner bros]
+    ~[india]
+
+@[ptext]
+    adult
+    collection
+    genres
+    overview
+    original language
+    production companies
+    production countries
+    spoken languages
+    status
+    tagline
+    title
+
+@[format]
+    excel
+    csv
+
+~[hi]
+    hi
+    hello
+    hey
+    howdy
+    hola
+
+~[greetings]
+    greetings
+    how are you
+    whats up
+    how are you doing
+    how is it going
+    good morning
+    good afternoon
+    good day
+    good night
+    are you there
+    morning
+    how are things going
+    are you around
+
+~[bye]
+    bye
+    goodbye
+    ttyl
+    gtg
+    adios
+    farewell
+    adieu
+    chao
+    chau
+
+~[leaving]
+    leaving
+    talk to you soon
+    have to go
+    got to go
+    talk to you later
+    heading out
+    im leaving now
+    going out
+
+~[wh]
+    what is
+    what are
+    which is
+    which are
+    show
+    display
+    open
+
+~[of]
+    of
+    for
+    in
+    with
+
+~[mov]
+    movies
+    pictures
+    films
+    videos
+
+~[action]
+    action
+    comedy
+    crime
+    drama
+    romance
+    history
+    animation
+    fantasy
+    adventure
+    thriller
+    science fiction
+
+~[english]
+    english
+    hindi
+    french
+    german
+    tamil
+    telugu
+
+~[warner bros]
+    pixar animation studios
+    warner bros
+    twentieth century fox
+    paramount pictures
+    walt disney pictures
+    columbia pictures
+    castle rock entertainment
+    metro-goldwyn-meyer
+    united artists
+
+~[india]
+    india
+    united states of america
+    germany
+    united kingdom
+    india
+    france
+
+~[courtesy]
+    can you
+    please
+
+~[data]
+    query
+    result

@@ -1,0 +1,47 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": []
+    },
+    "action_export": {
+      "slots": []
+    },
+    "action_filtercomp": {
+      "slots": []
+    },
+    "action_filtertext": {
+      "slots": []
+    },
+    "utter_greet": {
+      "slots": []
+    },
+    "utter_about": {
+      "slots": []
+    },
+    "action_filternum": {
+      "slots": []
+    },
+    "action_imdb": {
+      "slots": []
+    },
+    "action_genq": {
+      "slots": []
+    },
+    "action_restart": {
+      "slots": []
+    },
+    "action_gencalc": {
+      "slots": []
+    }
+  },
+  "rasa_core": "0.9.8",
+  "max_histories": [
+    5,
+    null
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.keras_policy.KerasPolicy",
+    "rasa_core.policies.fallback.FallbackPolicy"
+  ]
+}

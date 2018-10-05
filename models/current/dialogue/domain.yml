@@ -1,0 +1,102 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_bye
+- utter_about
+- utter_default
+- action_imdb
+- action_genq
+- action_filtertext
+- action_filternum
+- action_filtercomp
+- action_export
+- action_gencalc
+actions:
+- utter_greet
+- utter_bye
+- utter_about
+- utter_default
+- actions.ActionIMDB
+- actions.ActionGenQ
+- actions.ActionFilterText
+- actions.ActionFilterNum
+- actions.ActionFilterComp
+- actions.ActionExport
+- actions.ActionGenCalc
+config:
+  store_entities_as_slots: true
+entities:
+- movie
+- param
+- num
+- up
+- pnum
+- numall
+- opcalc
+- opcomp
+- ptext
+- val
+- this
+- format
+intents:
+- greet
+- bye
+- about
+- imdbreq
+- genq
+- filternum
+- filtertext
+- filtercomp
+- gencalc
+- export
+slots:
+  format:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  movie:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  num:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  numall:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  opcalc:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  opcomp:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  param:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  pnum:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  ptext:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  this:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  up:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  val:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_about:
+  - text: I'm MovieBuff bot, here to help you out with a movies database! Speak or
+      type in your queries and I'll answer them.
+  utter_bye:
+  - text: Good bye!
+  - text: See you soon.
+  - text: Do visit again!
+  utter_default:
+  - text: I didn't get you... please try again!
+  utter_greet:
+  - text: Hi there! How can I help you?
+  - text: Its a great day for some movies!
+topics: []

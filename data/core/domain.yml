@@ -1,0 +1,80 @@
+slots:
+  movie:
+    type: text
+  param:
+    type: text
+  num:
+    type: text
+  up:
+    type: text
+  pnum:
+    type: text
+  ptext:
+    type: text
+  val:
+    type: text
+  this:
+    type: text
+  format:
+    type: text
+  opcomp:
+    type: text
+  opcalc:
+    type: text
+  numall:
+    type: text
+
+intents:
+  - greet
+  - bye
+  - about
+  - imdbreq
+  - genq
+  - filternum
+  - filtertext
+  - filtercomp
+  - gencalc
+  - export
+
+entities:
+  - movie
+  - param
+  - num
+  - up
+  - pnum
+  - numall
+  - opcalc
+  - opcomp
+  - ptext
+  - val
+  - this
+  - format
+
+actions:
+  - utter_greet
+  - utter_bye
+  - utter_about
+  - utter_default
+  - actions.ActionIMDB
+  - actions.ActionGenQ
+  - actions.ActionFilterText
+  - actions.ActionFilterNum
+  - actions.ActionFilterComp
+  - actions.ActionExport
+  - actions.ActionGenCalc
+
+templates:
+  utter_greet:
+    - "Hi there! How can I help you?"
+    - "Its a great day for some movies!"
+
+  utter_bye:
+    - "Good bye!"
+    - "See you soon."
+    - "Do visit again!"
+
+  utter_about:
+    - "I'm MovieBuff bot, here to help you out with a movies database! Speak or type in your queries and I'll answer them."
+
+  utter_default:
+    - "I didn't get you... please try again!"

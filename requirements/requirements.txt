@@ -4,7 +4,7 @@ ConfigArgParse==0.13.0
 Flask==1.0.2
 Flask-Cors==3.0.6
 Flask-JWT-Simple==0.0.3
-Jinja2==2.10
+Jinja2==2.11.3
 Keras==2.2.2
 Keras-Applications==1.0.4
 Keras-Preprocessing==1.0.2

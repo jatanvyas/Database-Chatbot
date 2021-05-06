@@ -2,7 +2,7 @@ APScheduler==3.5.3
 Automat==0.7.0
 ConfigArgParse==0.13.0
 Flask==1.0.2
-Flask-Cors==3.0.6
+Flask-Cors==3.0.9
 Flask-JWT-Simple==0.0.3
 Jinja2==2.10
 Keras==2.2.2
